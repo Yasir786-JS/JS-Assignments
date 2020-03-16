@@ -1,0 +1,24 @@
+<div class= "wrapper">
+  <header class="container py-3">
+    <nav class="main-nav d-flex">
+      <ul class="list-unstyled d-flex w-50 justify-content-start">
+        <li>
+          <a routerLink="/student" routerLinkActive="active"><span data-hover="Home">Home</span></a>
+        </li>
+        <li>
+          <a routerLink="/add-student" routerLinkActive="active"><span data-hover="Add">AddStudent</span></a>
+        </li>
+      </ul>
+      <ul class="courses list-unstyled d-flex w-50 justify-content-end">
+        <li>
+          <a routerLink="/courses" routerLinkActive="active"><span data-hover="Courses">Courses</span></a>
+        </li>
+        <li>
+          <a routerLink="/add-course" routerLinkActive="active"><span data-hover="Add">Add Course</span></a>
+        </li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<div class="container mt-5" *ngIf="editedCourse">
+  <h1>Edit Course</h1>
+  <form [formGroup]="editedCourse" (ngSubmit)="editCourse()">
+    <div class="form-row">
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="courseName">Course Name:</label>
+          <input type="text" class="form-control" id="courseName" formControlName="name"
+            [(ngModel)]="editedCourse.value.name">
+        </div>
+      </div>
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="duration">Duration:</label>
+          <input type="text" class="form-control" id="duraion" formControlName="duration"
+            [(ngModel)]="editedCourse.value.duration">
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col px-2">
+        <div class="form-group">
+          <label for="fee">Fee:</label>
+          <input type="number" class="form-control" id="fee" formControlName="fee"
+            [(ngModel)]="editedCourse.value.fee">
+        </div>
+      </div>
+      <div class="col px-2">
+        <div class="form-group">
+          <label for="startDate">Start Date:</label>
+          <input type="text" class="form-control" id="startDate" formControlName="startDate"
+            [(ngModel)]="editedCourse.value.startDate">
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="w-50 btn btn-success">Save</button>
+  </form>
+</div>

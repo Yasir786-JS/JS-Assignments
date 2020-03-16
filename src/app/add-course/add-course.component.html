@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2>Add New Course : {{ newCourse.value.name }}</h2>
+  <hr>
+  <form [formGroup]="newCourse" (ngSubmit)="addCourse()">
+    <div class="form-row">
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="courseName">Course Name:</label>
+          <input type="text" class="form-control" id="courseName" formControlName="name">
+        </div>
+      </div>
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="duration">Duration:</label>
+          <input type="text" class="form-control" id="duration" formControlName="duration">
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="fee">Fee:</label>
+          <input type="text" class="form-control" id="fee" formControlName="fee">
+        </div>
+      </div>
+      <div class="col w-50 px-2">
+        <div class="form-group">
+          <label for="startDate">Start Date:</label>
+          <input type="date" class="form-control" id="startDate" formControlName="startDate">
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="w-50 btn btn-success">Add</button>
+  </form>
+</div>
